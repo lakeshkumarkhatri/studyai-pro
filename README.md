@@ -363,9 +363,9 @@ The project explores how Generative AI can improve education by transforming sta
 
 Software Engineering Student
 
-🔗 Portfolio: [https://lakeshkumar.netlify.app](https://lakeshkumar.vercel.app/)
+🔗 Portfolio: [https://lakeshkumar.vercel.app](https://lakeshkumar.vercel.app/)
 
-🔗 LinkedIn: [https://linkedin.com/in/lakeshkumar](https://www.linkedin.com/in/lakesh-kumar)
+🔗 LinkedIn: [https://linkedin.com/in/lakesh-kumar](https://www.linkedin.com/in/lakesh-kumar)
 
 🔗 GitHub: https://github.com/lakeshkumarkhatri
 
