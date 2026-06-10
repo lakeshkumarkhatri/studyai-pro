@@ -1,266 +1,206 @@
 # 🎓 StudyAI Pro
 
-> Transform notes, PDFs, and study materials into an interactive AI-powered learning experience.
+> Transform notes, PDFs, and study materials into interactive AI-powered learning experiences within seconds.
+
+![StudyAI Pro Banner](screenshots/home.png)
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
-![Gemini](https://img.shields.io/badge/Google-Gemini-blue)
+![Google Gemini](https://img.shields.io/badge/Google-Gemini-blue)
 ![Cloud Run](https://img.shields.io/badge/Google-Cloud%20Run-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
-## 🚀 Live Demo
+# 🚀 Live Demo
 
-🔗 **Live Application**
+🔗 Live Application
 
 https://aiseekho-study-app-346509650305.us-central1.run.app
 
 ---
 
-## 📖 Overview
+# 🎥 Demo
 
-StudyAI Pro is an AI-powered study assistant that converts raw study material into structured learning modules.
-
-Students can upload PDFs, images, lecture notes, or plain text and instantly receive:
-
-- Smart summaries
-- Concept explanations
-- Visual mind maps
-- Interactive flashcards
-- AI-generated quizzes
-- Personal AI tutor
-- Study plans
-- Progress tracking
-
-The goal is to reduce passive reading and turn study material into active learning experiences.
+![Demo](screenshots/demo.gif)
 
 ---
 
-## ✨ Features
+# 📖 Overview
 
-### 📄 Study Material Processing
+StudyAI Pro is an AI-powered learning assistant that converts raw study material into structured, interactive learning modules.
 
-Upload:
+Students can upload PDFs, images, lecture notes, or text content and instantly receive:
 
-- PDF files
-- Images (PNG/JPG)
-- Lecture notes
-- Text content
+* Smart summaries
+* Concept explanations
+* Visual mind maps
+* Interactive flashcards
+* AI-generated quizzes
+* Personalized AI tutoring
+* Study plans
+* Progress tracking
 
-The application extracts key concepts and creates a complete learning module.
-
----
-
-### 📝 Smart Summary
-
-Automatically generates:
-
-- Topic overview
-- Key concepts
-- Important takeaways
-
-Helping students quickly understand the subject.
+Instead of spending hours creating revision resources manually, StudyAI Pro automatically generates everything needed for efficient learning and exam preparation.
 
 ---
 
-### 🧠 Visual Mind Maps
+# 🎯 Problem Statement
 
-Creates concept maps showing:
+Students often spend significant time:
 
-- Core ideas
-- Relationships
-- Learning hierarchy
-- Topic structure
+* Reading lengthy notes
+* Creating summaries
+* Building flashcards
+* Preparing practice questions
+* Organizing study plans
 
-Useful for revision and visual learners.
+This process is repetitive and time-consuming.
 
----
-
-### 🎴 Flashcards
-
-AI generates flashcards automatically.
-
-Each flashcard contains:
-
-- Term
-- Definition
-- Explanation
-
-Ideal for quick revision sessions.
+StudyAI Pro leverages Generative AI to automate the entire learning workflow, transforming static study material into engaging and personalized learning experiences.
 
 ---
 
-### 🎯 Interactive Quiz
+# ✨ Core Features
 
-Generates MCQs with:
-
-- Multiple options
-- Instant feedback
-- Score calculation
-- Result analysis
-
-Students can test their understanding immediately.
-
----
-
-### 🤖 Personal AI Tutor
-
-Ask questions about the uploaded study material.
-
-Examples:
-
-- Explain this concept
-- Give examples
-- Simplify this topic
-- Generate practice questions
-
-The tutor remains focused on the current learning module.
+| Feature              | Description                                            |
+| -------------------- | ------------------------------------------------------ |
+| 📄 PDF Processing    | Upload lecture notes and study documents               |
+| 🖼️ Image Processing | Learn directly from whiteboard or handwritten images   |
+| 📝 Smart Summaries   | Generate concise topic summaries                       |
+| 🧠 Visual Mind Maps  | Understand concept relationships visually              |
+| 🎴 Flashcards        | AI-generated revision cards                            |
+| 🎯 Interactive Quiz  | Auto-generated MCQs with instant scoring               |
+| 🤖 AI Tutor          | Ask questions related to uploaded material             |
+| 📅 Study Planner     | Personalized learning roadmap                          |
+| 📈 Progress Tracking | Monitor quiz performance and progress                  |
+| 🌙 Dark Mode         | Modern learning experience for extended study sessions |
 
 ---
 
-### 📅 Personalized Study Plan
+# 🖼️ Screenshots
 
-Creates learning roadmaps based on:
-
-- Learning difficulty
-- Topic complexity
-- Study objectives
-
-Helping students prepare efficiently.
-
----
-
-### 📈 Progress Tracking
-
-Tracks:
-
-- Quiz performance
-- Learning activity
-- Study completion progress
-
-Encouraging consistent learning habits.
-
----
-
-### 🌙 Dark Mode
-
-Modern dark mode interface for comfortable learning during long study sessions.
-
----
-
-## 🖼️ Screenshots
-
-### Home Screen
+## Home Screen
 
 ![Home](screenshots/home.png)
 
 ---
 
-### Generated Learning Module
+## Generated Learning Module
 
 ![Module](screenshots/module-generated.png)
 
 ---
 
-### Mind Map
+## Mind Map Visualization
 
 ![Mind Map](screenshots/mindmap.png)
 
 ---
 
-### Flashcards
+## Flashcards
 
 ![Flashcards](screenshots/flashcards.png)
 
 ---
 
-### Interactive Quiz
+## Interactive Quiz
 
 ![Quiz](screenshots/quiz.png)
 
 ---
 
-### AI Tutor
+## AI Tutor
 
 ![AI Tutor](screenshots/chat-tutor.png)
 
 ---
 
-### Study Plan
+## Personalized Study Plan
 
 ![Study Plan](screenshots/study-plan.png)
 
 ---
 
-### Progress Dashboard
+## Progress Dashboard
 
 ![Progress](screenshots/progress.png)
 
 ---
 
-### Dark Mode
+## Dark Mode
 
 ![Dark Mode](screenshots/dark-mode.png)
 
 ---
 
-## 🏗️ Architecture
+# 🏗️ System Architecture
 
-```text
-User Input
-      │
-      ▼
-PDF / Image / Notes
-      │
-      ▼
-Google Gemini API
-      │
-      ▼
-Structured Learning Module
-      │
- ┌────┼────┬────┬────┬────┐
- ▼    ▼    ▼    ▼    ▼
-Summary
-Mind Map
-Flashcards
-Quiz
-AI Tutor
-Study Plan
-Progress
-```
+![Architecture](screenshots/architecture.png)
+
+### Workflow
+
+1. User uploads study material
+2. Content is processed and analyzed
+3. Google Gemini extracts concepts
+4. Structured learning module is generated
+5. Interactive learning resources are created
+
+Generated outputs include:
+
+* Summary
+* Mind Map
+* Flashcards
+* Quiz
+* AI Tutor
+* Study Plan
+* Progress Dashboard
 
 ---
 
-## 🛠️ Technology Stack
+# 🛠️ Technology Stack
 
-### Frontend
+## Frontend
 
-- Streamlit
+* Streamlit
 
-### AI Layer
+## Backend
 
-- Google Gemini API
+* Python
 
-### Backend
+## AI Layer
 
-- Python
+* Google Gemini API
 
-### Deployment
+## Deployment
 
-- Google Cloud Run
+* Google Cloud Run
 
-### Data Processing
+## Data Processing
 
-- JSON
-- PDF Parsing
-- Image Processing
+* JSON Parsing
+* PDF Extraction
+* Image Analysis
 
 ---
 
-## 📦 Installation
+# 📊 Project Highlights
 
-### Clone Repository
+* Built using Google Gemini API
+* Deployed on Google Cloud Run
+* Supports PDF, Image, and Text inputs
+* Generates complete study modules automatically
+* Includes AI Tutor and Progress Tracking
+* Fully responsive interface
+* Dark Mode support
+* Developed during AI Seekho 2026
+* Focused on improving learning efficiency
+
+---
+
+# 📦 Installation
+
+## Clone Repository
 
 ```bash
 git clone https://github.com/lakeshkumarkhatri/studyai-pro.git
@@ -268,33 +208,33 @@ git clone https://github.com/lakeshkumarkhatri/studyai-pro.git
 cd studyai-pro
 ```
 
-### Create Virtual Environment
+## Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### Activate Environment
+## Activate Environment
 
-Windows:
+### Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-Linux/Mac:
+### Linux / macOS
 
 ```bash
 source venv/bin/activate
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Set Environment Variable
+## Configure Environment Variables
 
 Create a `.env` file:
 
@@ -302,17 +242,23 @@ Create a `.env` file:
 GEMINI_API_KEY=YOUR_API_KEY
 ```
 
-### Run Application
+## Run Application
 
 ```bash
 streamlit run app.py
 ```
 
+Application will be available at:
+
+```text
+http://localhost:8501
+```
+
 ---
 
-## ☁️ Deployment
+# ☁️ Deployment
 
-This project is deployed using Google Cloud Run.
+This application is deployed using Google Cloud Run.
 
 Deploy manually:
 
@@ -325,58 +271,84 @@ gcloud run deploy studyai-pro \
 
 ---
 
-## 🎯 Use Cases
+# 🎯 Use Cases
 
-- University students
-- Exam preparation
-- Self-learning
-- Professional certification study
-- Quick revision sessions
-- Interactive learning environments
+### Students
 
----
+* Exam preparation
+* Concept understanding
+* Quick revision
 
-## 🔮 Future Improvements
+### Universities
 
-- Multi-language support
-- Voice interaction
-- PDF annotations
-- Advanced analytics
-- Study streak system
-- Gamification
-- Collaborative study rooms
-- AI-generated practice exams
+* Interactive learning resources
+* Course content transformation
 
----
+### Self Learners
 
-## 🏆 Project Background
+* Accelerated learning workflows
+* Structured knowledge acquisition
 
-StudyAI Pro was developed during the Google AI Seekho 2026 program.
+### Professionals
 
-The project explores how Generative AI can improve education by transforming static study material into engaging, personalized learning experiences.
+* Certification preparation
+* Technical knowledge revision
 
 ---
 
-## 👨‍💻 Author
+# 🔮 Future Roadmap
 
-### Lakesh Kumar
+Planned improvements:
+
+* Multi-language support
+* Voice-based AI tutor
+* PDF annotation support
+* Learning analytics dashboard
+* Gamification system
+* Achievement badges
+* Study streak tracking
+* Collaborative study rooms
+* Practice exam generator
+* Mobile application
+
+---
+
+# 🏆 AI Seekho 2026 Project
+
+StudyAI Pro was developed as part of the AI Seekho 2026 program.
+
+The project explores how Generative AI can improve education by transforming traditional study materials into personalized and interactive learning experiences.
+
+---
+
+# 👨‍💻 Author
+
+## Lakesh Kumar
 
 Software Engineering Student
 
-🔗 Portfolio: [https://lakeshkumar.vercel.app](https://lakeshkumar.vercel.app/)
+🌐 Portfolio
+https://lakeshkumar.vercel.app
 
-🔗 LinkedIn: [https://linkedin.com/in/lakesh-kumar](https://www.linkedin.com/in/lakesh-kumar)
+💼 LinkedIn
+https://www.linkedin.com/in/lakesh-kumar
 
-🔗 GitHub: https://github.com/lakeshkumarkhatri
+💻 GitHub
+https://github.com/lakeshkumarkhatri
 
 ---
 
-## ⭐ Support
+# ⭐ Support
 
 If you found this project useful:
 
-- Star the repository
-- Share feedback
-- Connect on LinkedIn
+* ⭐ Star the repository
+* 🍴 Fork the project
+* 💡 Share feedback
+* 🤝 Connect on LinkedIn
 
-Contributions and suggestions are welcome.
+Contributions, ideas, and suggestions are always welcome.
+
+---
+
+### Built with ❤️ using Python, Streamlit, Google Gemini, and Google Cloud Run.
