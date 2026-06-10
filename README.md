@@ -20,12 +20,6 @@ https://aiseekho-study-app-346509650305.us-central1.run.app
 
 ---
 
-# 🎥 Demo
-
-![Demo](screenshots/demo.gif)
-
----
-
 # 📖 Overview
 
 StudyAI Pro is an AI-powered learning assistant that converts raw study material into structured, interactive learning modules.
