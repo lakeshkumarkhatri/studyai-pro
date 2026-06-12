@@ -607,7 +607,7 @@ div[data-testid="stAlert"][kind="error"],
 api_key = os.environ.get("GEMINI_API_KEY", "")
 if api_key:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-3.1-flash-lite-preview")
+    model = genai.GenerativeModel("gemini-1.5-flash")
 else:
     st.error("⚠️  `GEMINI_API_KEY` environment variable not set.")
     st.stop()
@@ -620,22 +620,26 @@ def extract_text_from_pdf(file) -> str:
     return "\n".join(page.extract_text() or "" for page in reader.pages)
 
 def safe_json_parse(raw: str):
-    cleaned = re.sub(r"```(?:json)?", "", raw).strip().rstrip("`")
     try:
-        return json.loads(cleaned)
+        return json.loads(raw)
     except json.JSONDecodeError:
-        match = re.search(r"\{.*\}", cleaned, re.DOTALL)
-        if match:
-            try:
-                return json.loads(match.group())
-            except json.JSONDecodeError:
-                return None
-        return None
+        # Fallback if there's any stray whitespace or markdown
+        cleaned = raw.strip().removeprefix("```json").removesuffix("```").strip()
+        try:
+            return json.loads(cleaned)
+        except json.JSONDecodeError:
+            return None
 
 def call_gemini_with_retry(prompt_parts, retries: int = 3, delay: float = 4.0):
     for attempt in range(retries):
         try:
-            return model.generate_content(prompt_parts)
+            # ADD NATIVE JSON MODE HERE:
+            return model.generate_content(
+                prompt_parts,
+                generation_config={
+                    "response_mime_type": "application/json",
+                }
+            )
         except Exception as e:
             err = str(e).lower()
             if "quota" in err or "429" in err or "resource" in err:
