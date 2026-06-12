@@ -839,8 +839,8 @@ if analyze_button:
         else:
             api_payload = Image.open(uploaded_file)
     elif user_input and user_input.strip():
-        if len(user_input.split()) < 20:
-            st.warning("Please provide at least 20 words. A topic name alone isn't enough.")
+        if len(user_input.split()) < 1:
+            st.warning("Please provide at least 1 word. A topic name alone isn't enough.")
             st.stop()
         api_payload = f"Content:\n{user_input[:12000]}"
 
