@@ -630,15 +630,23 @@ def safe_json_parse(raw: str):
         except json.JSONDecodeError:
             return None
 
-def call_gemini_with_retry(prompt_parts, retries: int = 3, delay: float = 4.0):
+def call_gemini_with_retry(
+    prompt_parts,
+    retries: int = 3,
+    delay: float = 4.0,
+    json_mode: bool = True
+):
     for attempt in range(retries):
         try:
             # ADD NATIVE JSON MODE HERE:
+            config = {}
+
+            if json_mode:
+                config["response_mime_type"] = "application/json"
+
             return model.generate_content(
                 prompt_parts,
-                generation_config={
-                    "response_mime_type": "application/json",
-                }
+                generation_config=config
             )
         except Exception as e:
             err = str(e).lower()
@@ -855,7 +863,10 @@ if analyze_button:
                 st.write(msg); time.sleep(0.45)
 
             try:
-                response = call_gemini_with_retry([build_study_prompt(difficulty), api_payload])
+                response = call_gemini_with_retry(
+                    [build_study_prompt(difficulty), api_payload],
+                    json_mode=True
+                )
                 parsed = safe_json_parse(response.text)
                 if parsed is None:
                     sw.update(label="❌ AI returned invalid JSON. Try again.", state="error")
@@ -1105,7 +1116,10 @@ if st.session_state.study_data:
                             f"=== STUDENT QUESTION ===\n{user_q}"
                         )
                         try:
-                            resp  = call_gemini_with_retry(prompt_chat)
+                            resp = call_gemini_with_retry(
+                                prompt_chat,
+                                json_mode=False
+                            )
                             reply = resp.text
                             st.markdown(reply)
                             st.session_state.chat_history.append(
