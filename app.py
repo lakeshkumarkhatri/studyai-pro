@@ -607,7 +607,7 @@ div[data-testid="stAlert"][kind="error"],
 api_key = os.environ.get("GEMINI_API_KEY", "")
 if api_key:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-3.1-flash-lite-preview")
 else:
     st.error("⚠️  `GEMINI_API_KEY` environment variable not set.")
     st.stop()
